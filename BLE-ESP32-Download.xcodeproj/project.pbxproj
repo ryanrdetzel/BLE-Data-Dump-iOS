@@ -12,6 +12,7 @@
 		B3163262223429D600D12129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3163260223429D600D12129 /* Main.storyboard */; };
 		B3163264223429D800D12129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3163263223429D800D12129 /* Assets.xcassets */; };
 		B3163267223429D800D12129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3163265223429D800D12129 /* LaunchScreen.storyboard */; };
+		B316327022342A7300D12129 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B316326F22342A7300D12129 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B3163263223429D800D12129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3163266223429D800D12129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3163268223429D800D12129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B316326F22342A7300D12129 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B316327022342A7300D12129 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				B316325B223429D600D12129 /* BLE-ESP32-Download */,
 				B316325A223429D600D12129 /* Products */,
+				B316326E22342A7300D12129 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				B3163268223429D800D12129 /* Info.plist */,
 			);
 			path = "BLE-ESP32-Download";
+			sourceTree = "<group>";
+		};
+		B316326E22342A7300D12129 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B316326F22342A7300D12129 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +108,11 @@
 				TargetAttributes = {
 					B3163258223429D600D12129 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
